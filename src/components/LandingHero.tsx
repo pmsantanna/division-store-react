@@ -9,7 +9,7 @@ function LandingHero() {
 
       <div className="overlay-content relative z-[2] px-4">
         <h1 className="font-orbitron text-white text-6xl md:text-7xl font-extrabold tracking-wide glitch-text">
-          DIV<span className="text-pink-500">//</span>ISION
+          DIV<span className="text-pink-500 glitch">//</span>ISION
         </h1>
 
         <p className="mt-6 text-gray-300 text-xl font-rajdhani">

@@ -40,3 +40,38 @@
 .read-the-docs {
   color: #888;
 }
+
+.text-glitch {
+  color: white;
+  text-shadow: 1px 0 #f72585, -1px 0 #00ffe5;
+  animation: flicker 2s infinite alternate;
+}
+
+@keyframes flicker {
+  0% {
+    text-shadow: 1px 0 #f72585, -1px 0 #00ffe5;
+  }
+  50% {
+    text-shadow: 2px 0 #ff00ff, -2px 0 #00ffe5;
+  }
+  100% {
+    text-shadow: 1px 0 #f72585, -1px 0 #00ffe5;
+  }
+}
+
+.glitch {
+  animation: glitchColor 2s infinite alternate;
+  color: #ff00ff;
+}
+
+@keyframes glitchColor {
+  0% {
+    color: #ff00ff;
+  }
+  50% {
+    color: #00ffff;
+  }
+  100% {
+    color: #ff00ff;
+  }
+}

@@ -85,3 +85,20 @@ body {
     left: 100%;
   }
 }
+
+.glitch {
+  animation: glitchColor 2s infinite alternate;
+  color: #ff00ff;
+}
+
+@keyframes glitchColor {
+  0% {
+    color: #ff00ff;
+  }
+  50% {
+    color: #00ffff;
+  }
+  100% {
+    color: #ff00ff;
+  }
+}
