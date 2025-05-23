@@ -1,0 +1,160 @@
+.banner-principal {
+  height: 80vh;
+  min-height: 500px;
+  padding: 60px 20px;
+  background-color: #0a0a0a;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-principal {
+  background: url('img/banner-cybertribal.png') center center / cover no-repeat;
+}
+
+.banner-principal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1));
+}
+
+.banner-principal::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1200px;
+  height: 1200px;
+  transform: translate(-50%, -50%);
+  opacity: 0.9;
+  z-index: 1;
+  pointer-events: none;
+  animation: rotateSlow 60s linear infinite;
+}
+
+.banner-principal .container {
+  position: relative;
+  z-index: 2;
+}
+
+.ritual-titulo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 0 8px rgba(255, 0, 255, 0.25), 0 0 3px rgba(0, 255, 255, 0.2);
+  animation-delay: 0s;
+}
+
+.ritual-sub {
+  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+  color: #cfcfcf;
+  font-weight: 500;
+  max-width: 700px;
+  margin: 1rem auto 0.5rem;
+  line-height: 1.6;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+  animation-delay: 0.3s;
+}
+
+.ritual-mantra {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  color: #aaaaaa;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin-top: 0.3rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  animation-delay: 0.6s;
+}
+
+.rito-button {
+  position: relative;
+  display: inline-block;
+  padding: 0.8rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  text-decoration: none;
+  z-index: 2;
+  animation-delay: 0.9s;
+}
+
+.rito-button::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.rito-button:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.4),
+    0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.rito-button-glow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  animation: buttonGlow 2s infinite linear;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.rito-button:hover .rito-button-glow {
+  opacity: 1;
+}
+
+.rito-button-glow {
+  pointer-events: none;
+  display: block;
+  border-radius: inherit;
+}
+
+@keyframes rotateSlow {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes buttonGlow {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}

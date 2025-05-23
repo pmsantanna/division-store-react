@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
-    <nav className="w-full bg-black border-b border-b-white/90 shadow-sm fixed top-0 z-50">
+    <nav className="w-full z-50 bg-black border-b border-white/90 fixed md:static">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <Link
           to="/"

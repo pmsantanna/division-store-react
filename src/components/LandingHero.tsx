@@ -2,7 +2,7 @@ import '../styles/landing-hero.css';
 
 function LandingHero() {
   return (
-    <section className="landing-hero relative h-screen bg-black overflow-hidden flex items-center justify-center text-center">
+    <section className="landing-hero relative h-screen pt-16 bg-black overflow-hidden flex items-center justify-center text-center">
       <div className="selo-animado" aria-hidden="true" />
 
       <div className="grain-overlay" aria-hidden="true" />
