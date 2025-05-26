@@ -41,7 +41,7 @@
 
   .overlay-grain {
     @apply relative overflow-hidden;
-    background: url('img/noise-grain.gif') repeat;
+    background: url('/division-store-react/img/noise-grain.gif') repeat;
     opacity: 0.3;
   }
 
@@ -55,7 +55,8 @@
     filter: blur(1px);
     transform: translate(-50%, -50%);
     pointer-events: none;
-    background: url('img/mystic-seal.svg') center center / cover no-repeat;
+    background: url('/division-store-react/img/mystic-seal.svg') center center /
+      cover no-repeat;
     animation: rotateSlow 60s linear infinite;
     opacity: 1;
   }
