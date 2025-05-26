@@ -7,12 +7,13 @@
 @theme {
   /* cores */
   --color-white: #fff;
-  --color-primary: #1e40af;
+  --color-primary: #eee;
   --color-primary-dark: #1e3a8a;
 
   --color-neutral-02: #cfcfcf;
-  --color-neutral-03: #aaa;
-  --color-neutral-04: #777;
+  --color-neutral-03: #aaaaaa;
+  --color-neutral-04: #777777;
+  --color-neutral-05: #212121;
 
   /* espaçamentos */
   --spacing-md: 1rem;
@@ -27,6 +28,13 @@
 
   /* deco */
   --text-shadow-glitch: 0 0 8px #ff00ff66, 0 0 3px #00fff055;
+}
+
+@layer components {
+  .text-primary {
+    font-family: var(--font-primary);
+    color: var(--color-neutral-02);
+  }
 }
 
 @layer utilities {

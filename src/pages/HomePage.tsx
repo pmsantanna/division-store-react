@@ -1,12 +1,13 @@
 import React from 'react';
 import { LinkButton } from '../components/Button/LinkButton';
+import { NavBar } from '../components/NavBar/NavBar';
 
 import '../styles/home.css';
 
 const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* <NavBar /> */}
+      <NavBar />
 
       {/* Hero Section */}
       <main className="hero-section relative flex-grow flex items-center justify-center px-4 text-center">
