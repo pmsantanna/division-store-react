@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+@import 'tailwindcss';
+
+/* bloco de variáveis */
+@theme {
+  /* cores */
+  --color-white: #fff;
+  --color-primary: #1e40af;
+  --color-primary-dark: #1e3a8a;
+
+  --color-neutral-02: #cfcfcf;
+  --color-neutral-03: #aaa;
+  --color-neutral-04: #777;
+
+  /* espaçamentos */
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+
+  /* bordas */
+  --radius-md: 0.375rem;
+
+  /* fontes */
+  --font-primary: 'Orbitron', sans-serif;
+  --font-secondary: Rajdhani, sans-serif;
+
+  /* deco */
+  --text-shadow-glitch: 0 0 8px #ff00ff66, 0 0 3px #00fff055;
+}
+
+@layer utilities {
+  @keyframes flicker {
+    0% {
+      text-shadow: 1px 0 #f72585, -1px 0 #00ffe5;
+    }
+    50% {
+      text-shadow: 2px 0 #ff00ff, -2px 0 #00ffe5;
+    }
+    100% {
+      text-shadow: 1px 0 #f72585, -1px 0 #00ffe5;
+    }
+  }
+
+  .animation-flicker {
+    animation: flicker 2s infinite alternate;
+  }
+
+  @keyframes glitchColor {
+    0% {
+      color: #ff00ff;
+    }
+    50% {
+      color: #00ffff;
+    }
+    100% {
+      color: #ff00ff;
+    }
+  }
+
+  .animation-glitchcolor {
+    animation: glitchColor 2s infinite alternate;
+    color: #ff00ff;
+  }
+
+  @keyframes rotateSlow {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  .animation-rotation-slow {
+    animation: rotateSlow 60s linear infinite;
+  }
+}

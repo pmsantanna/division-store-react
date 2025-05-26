@@ -1,0 +1,66 @@
+@import 'tailwindcss';
+
+@layer components {
+  .logo-glitch {
+    font-family: var(--font-primary);
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: var(--text-shadow-glitch);
+    z-index: 2;
+  }
+
+  .hero-section {
+    background-color: black;
+  }
+
+  .frase-central {
+    margin-top: 1rem;
+    color: var(--color-neutral-02);
+    font-family: var(--font-secondary);
+    font-style: italic;
+    font-weight: 500;
+    animation: fadeUp 1s ease-in;
+    margin-bottom: 2rem;
+    z-index: 2;
+  }
+
+  .frase-sub {
+    color: var(--color-neutral-03);
+    font-family: var(--font-secondary);
+    letter-spacing: 0.5px;
+    animation: fadeUp 1.5s ease-in;
+    z-index: 500;
+  }
+
+  .hero-section {
+    position: relative;
+  }
+
+  .overlay-grain {
+    @apply relative overflow-hidden;
+    background: url('img/noise-grain.gif') repeat;
+    opacity: 0.3;
+  }
+
+  .overlay-grain::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1200px;
+    height: 1200px;
+    filter: blur(1px);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    background: url('img/mystic-seal.svg') center center / cover no-repeat;
+    animation: rotateSlow 60s linear infinite;
+    opacity: 1;
+  }
+
+  .landing-footer {
+    color: var(--color-neutral-03);
+  }
+}

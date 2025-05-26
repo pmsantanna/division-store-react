@@ -1,0 +1,45 @@
+@import 'tailwindcss';
+
+@layer components {
+  .btn-rito {
+    @apply relative inline-block overflow-hidden
+           font-semibold uppercase text-white
+           border-2 border-white
+           px-10 py-3
+           transition-colors;
+    color: var(--color-white);
+    background-color: transparent;
+    border: 2px solid var(--color-white);
+    cursor: pointer;
+  }
+
+  .btn-rito-glow {
+    @apply absolute inset-0 pointer-events-none;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      transparent 100%
+    );
+    transform: translateX(-100%);
+    animation: buttonGlow 2s infinite linear;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+  }
+
+  .btn-rito:hover .btn-rito-glow {
+    opacity: 1;
+  }
+}
+
+@layer utilities {
+  @keyframes buttonGlow {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+}
